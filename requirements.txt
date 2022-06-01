@@ -1,0 +1,2 @@
+ln-markets >= 1.0.4
+pyaml >= 6.0

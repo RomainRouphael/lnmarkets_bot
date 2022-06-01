@@ -1,0 +1,19 @@
+## your personal information from LNMarkets
+lnm_credentials: 
+  key: 'lQ9lfBrLfPAfraROW71zn2PETFj+k5d76tYVKBV2bQo='
+  secret: 'zCXP7RcwZLJn4he9WLaOj/giwqL7GmnZM8jy46ff9D8SDp2NxjeEK8XihPAbmfBWZdsGNZeyKPSWlczCP/DNAg=='
+  passphrase: 'cihedje54g3f'
+  network: 'testnet'
+
+## choose your strategy while affecting True (and False to other strategies)
+strategies: 
+  ta_summary: True
+  
+
+## parameters for strategies
+ta_summary:
+  qty_per_order: 1 #type=int, min=1
+  leverage: 10 #type=int, min=1, max=100
+  interval: 60 #time in seconds between the opening of two positions, type=int
+  
+
