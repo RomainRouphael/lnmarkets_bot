@@ -31,7 +31,7 @@ class lnm_client():
             'leverage': leverage
         }
         logging.info(datetime.datetime.fromtimestamp(time()))
-        logging.warning('New Market Buy Running')
+        logging.warning(f'New Market Buy Running for Quantity = {quantity} and Leverage = {leverage}')
 
         return self.lnm.futures_new_position(params)
 
@@ -43,22 +43,29 @@ class lnm_client():
             'leverage': leverage
         }
         logging.info(datetime.datetime.fromtimestamp(time()))
-        logging.warning('New Market Sell Running')
-    
+        logging.warning(f'New Market Sell Running for Quantity = {quantity} and Leverage = {leverage}')
+        
         return self.lnm.futures_new_position(params)
+    
+    
 
+    def close_position(self, pid):
+        params = {
+            'pid': pid,
+            }
+        logging.info(datetime.datetime.fromtimestamp(time()))
+        logging.warning(f'Close position pid = {pid}')
+
+        return self.lnm.futures_close_position(params)
 
 # options = {
-#      'key': 'lQ9lfBrLfPAfraROW71zn2PETFj+k5d76tYVKBV2bQo=',
-#      'secret': 'zCXP7RcwZLJn4he9WLaOj/giwqL7GmnZM8jy46ff9D8SDp2NxjeEK8XihPAbmfBWZdsGNZeyKPSWlczCP/DNAg==',
-#      'passphrase': 'cihedje54g3f',
-#      'network': 'testnet'}
-
-# qty_per_order = 1 #type=int, min=1
-# leverage = 10 #type=int, min=1, max=100
+#     'key': 'qE8nObMFzyEHd5moHZxBY7LeYkxVQrH8VxEsLHVI9Sw=',
+#     'secret': 'Z7oTS5WtsmBqp1ysg46RSQ7Wtt9xP7ANC4z0NZaETKBWo74rZXZqEKynpfKyf5gKU0R3xWVn1DrSljA5LXqSUw==',
+#     'passphrase': '8eehc19ghfc97',
+#     'network': 'testnet'}
 
 # lnm = lnm_client(options)
 
-# lnm.market_long(quantity = qty_per_order, leverage = leverage)
+# #lnm.close_position(pid='2729a816-f22c-4488-a29b-972f67cee967')
 
-# #lnm_client(options)
+# lnm.market_long(quantity = 10, leverage = 10)

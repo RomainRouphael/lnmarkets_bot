@@ -1,8 +1,8 @@
-## your personal information from LNMarkets
+## your personal information from LNMarkets (Rufus15)
 lnm_credentials: 
-  key: 'lQ9lfBrLfPAfraROW71zn2PETFj+k5d76tYVKBV2bQo='
-  secret: 'zCXP7RcwZLJn4he9WLaOj/giwqL7GmnZM8jy46ff9D8SDp2NxjeEK8XihPAbmfBWZdsGNZeyKPSWlczCP/DNAg=='
-  passphrase: 'cihedje54g3f'
+  key: '+6PFEhoJRuTepnflu/mAEX5rtYZ7zarVPU2bdhHmt4A='
+  secret: 'fVK6nI8qbLYBLJzedVsj8mkCaOYbLdHBkDlbY85QRwVsMmmDyvJpKGLPC5N0Phmi6jwPKaWeiTtj0gDp9E7Vng=='
+  passphrase: '5j74f5bbaa744'
   network: 'testnet'
 
 ## choose your strategy while affecting True (and False to other strategies)
@@ -12,8 +12,10 @@ strategies:
 
 ## parameters for strategies
 ta_summary:
-  qty_per_order: 1 #type=int, min=1
-  leverage: 50 #type=int, min=1, max=100
-  interval: 6 #time in seconds between the opening of two positions, type=int
+  quantity: 10 #type=int, min=1, quantity of each open position
+  leverage: 10 #type=int, min=1, max=100
+  interval: '1m' #type=string, available interval between 2 TA summary signals: "1m", "5m", "15m", "30m", "1h", "2h", "4h", "1d", "1W", "1M"
+
+
   
 
