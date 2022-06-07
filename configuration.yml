@@ -16,8 +16,8 @@ ta_summary:
   quantity: 10 #type=int, min=1, quantity of each open position
   leverage: 10 #type=int, min=1, max=100
   interval: '1m' #type=string, available interval between 2 TA summary signals: "1m", "5m", "15m", "30m", "1h", "2h", "4h", "1d", "1W", "1M"
-  timeout: 2 #type=int, min=1, number of minutes the trading strat will be running  
+  timeout: 3 #type=int, min=1, number of minutes the trading strat will be running  
 
 
-  
+## Other indicators for strats: https://github.com/brian-the-dev/python-tradingview-ta/blob/main/tradingview_ta/main.py
 

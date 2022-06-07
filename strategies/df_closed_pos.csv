@@ -1,2 +1,2 @@
 ,market_filled_ts,creation_ts,closed_ts,pid,uid,side,type,quantity,price,margin,liquidation,stoploss,takeprofit,market_wi,margin_wi,stoploss_wi,takeprofit_wi,pl,closed,canceled,exit_price,leverage,sign,sum_carry_fees
-0,1654529360940,1654529360940,1654529481863,15becd9e-bed2-42cb-a4cb-c9c33f0ae0df,1cb3b5a9-3ef8-42df-9ebd-4026b3edb124,s,m,10,31218.0,3203,34686.5,,,filled,closed,,,-97,True,False,31312.5,10,-1,0
+0,1654612615747,1654612615747,1654612796999,0c5c46a6-106b-467d-b0ad-f7a18fbb3954,1cb3b5a9-3ef8-42df-9ebd-4026b3edb124,b,m,10,29868.5,3348,27153.0,,,filled,closed,,,-61,True,False,29814.5,10,1,0
