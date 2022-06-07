@@ -12,8 +12,7 @@ class lnm_client():
     def __init__(self, options):
         self.options = options
         self.lnm = rest.LNMarketsRest(**self.options)
-
-        if len(json.loads(self.lnm.get_user())) != 28:
+        if len(json.loads(self.lnm.get_user())['uid']) != 36:
             logging.warning('There is probably an error with your LN Markets credentials')
         else:
             logging.info('Connection to LN Markets ok!')
@@ -31,8 +30,7 @@ class lnm_client():
             'leverage': leverage
         }
         logging.info(datetime.datetime.fromtimestamp(time()))
-        logging.warning(f'New Market Buy Running for Quantity = {quantity} and Leverage = {leverage}')
-
+        logging.info(f'New Market Buy Running for Quantity = {quantity} and Leverage = {leverage}')
         return self.lnm.futures_new_position(params)
 
     def market_short(self, quantity, leverage):
@@ -43,20 +41,28 @@ class lnm_client():
             'leverage': leverage
         }
         logging.info(datetime.datetime.fromtimestamp(time()))
-        logging.warning(f'New Market Sell Running for Quantity = {quantity} and Leverage = {leverage}')
-        
+        logging.info(f'New Market Sell Running for Quantity = {quantity} and Leverage = {leverage}')
         return self.lnm.futures_new_position(params)
     
     
-
     def close_position(self, pid):
         params = {
             'pid': pid,
             }
         logging.info(datetime.datetime.fromtimestamp(time()))
-        logging.warning(f'Close position pid = {pid}')
+        logging.info(f'Close position pid = {pid}')
 
         return self.lnm.futures_close_position(params)
+
+    def get_positions(self):
+        params = {
+            'type': 'closed',
+            }
+        logging.info(datetime.datetime.fromtimestamp(time()))
+        logging.info('Retrieving closed positions')
+
+        return self.lnm.futures_get_positions(params)
+
 
 # options = {
 #     'key': 'qE8nObMFzyEHd5moHZxBY7LeYkxVQrH8VxEsLHVI9Sw=',

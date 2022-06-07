@@ -17,4 +17,8 @@ lnm_options = yaml_file["lnm_credentials"]
 def bot():
     if yaml_file['strategies']['ta_summary']:
         config = yaml_file['ta_summary']
-        return TAS.ta_summary(TAS(lnm_options), quantity = config['quantity'], leverage = config['leverage'], interval = config['interval'])
+        return TAS.ta_summary(TAS(lnm_options), 
+                                    quantity = config['quantity'], 
+                                    leverage = config['leverage'], 
+                                    interval = config['interval'], 
+                                    timeout = config['timeout'])
