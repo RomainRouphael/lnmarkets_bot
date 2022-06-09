@@ -1,6 +1,6 @@
 from lnmarkets import rest
 import datetime
-from time import sleep, time
+from time import time
 import logging
 import json
 
