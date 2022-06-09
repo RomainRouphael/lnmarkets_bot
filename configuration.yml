@@ -1,8 +1,8 @@
-## your personal information from LNMarkets (Rufus15)
+## your personal information from lnmarkets.com
 lnm_credentials: 
-  key: 'QlZ++t74APYMWtnMQKl5QXQlFgdJp7CWUtYMdiaw12k='
-  secret: 'P3TF5JA2vk5mPVO6CAeevUe2zVgPrkwb23DxBD9OLTWP4jMi/W3/iaS4wlCu9zbBwJkF2o5dAw6zywgcG++G+A=='
-  passphrase: 'fe028bb3h4eb9'
+  key: 'your_api_key'
+  secret: 'your_api_secret'
+  passphrase: 'your_passphrase'
   network: 'testnet'
 
 ## choose your strategy while affecting True (and False to other strategies)
